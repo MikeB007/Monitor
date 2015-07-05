@@ -1,0 +1,72 @@
+<html lang="en-us" ng-app="StockMonitor">
+</html>
+
+<head>
+<meta http-equiv="refresh" content="150">
+    <title>Stock Monitor</title>
+    <meta charset="UTF-8">
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        
+        <! -- load angular via CDN -->
+        <script src="JS/angular.js"></script>
+        <script src="//code.angularjs.org/1.3.0-rc.2/angular-route.min.js"></script>
+        <script src="//code.angularjs.org/1.3.0-rc.2/angular-resource.min.js"></script>
+        <script src="JS/app.js"></script>
+</head>
+
+
+
+<frameset rows="100,*,350,100">
+    <frameset rows="20,*">
+        <frame src="HDR/FXRate.html">
+        <frame src="https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22USDCAD%22)&format=json&diagnostics=true&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=" name="left">
+    </frameset>    
+    <frameset cols="480,*,800">
+        <frameset rows="25,*">
+            <frame src="HDR/arca.html">
+            <frame ARCA src="http://162.68.208.10/arcadataserver/ArcaBookData.php?Symbol=TD" name="main">
+        </frameset>        
+        <frame src="http://ichart.yahoo.com/t?s=TD&width=582&height=415" name="top">
+        <frame src="http://www.cnbc.com/id/15839121" name="main">
+    </frameset>
+    <frameset cols="420,*, 680">
+        <frameset rows="25,*">
+            <frame src="HDR/TD.html">
+            <frame TD src="http://www.advfn.com/p.php?pid=staticchart&s=T^TD&p=0&t=41&dm=1&vol=1" name="bottom">
+        </frameset>
+        <frameset cols="100,100,100,400">
+            <frameset rows="25,*">
+                <frame src="HDR/RY.html">
+                <frame Royal  src="http://www.advfn.com/p.php?pid=staticchart&s=T^RY&p=0&t=35&dm=1&vol=1" name="main">
+            </frameset>
+            <frameset rows="25,*">
+                <frame src="HDR/CIBC.html">
+                <frame CIBC   src="http://www.advfn.com/p.php?pid=staticchart&s=T^CM&p=0&t=35&dm=1&vol=1" name="main">
+            </frameset>
+            <frameset rows="25,*">
+                <frame src="HDR/BMO.html">
+                <frame CIBC   src="http://www.advfn.com/p.php?pid=staticchart&s=T^bmo&p=0&t=35&dm=1&vol=1" name="main">
+            </frameset>
+            <frameset rows="25,*">
+                <frame src="HDR/indexes.html">
+                <frame market   src="http://web.tmxmoney.com/marketsca.php" name="main">
+            </frameset>
+        </frameset>
+    <frame src="http://apps.cnbc.com/view.asp?uid=stocks/delayedQuotes&symbol=TD-T&country=CA" name="bottom">
+
+    </frameset>
+            <frameset rows="25,*">
+                <frame src="HDR/NEWS.html">
+                <frame src="http://www.cnbc.com/franchise/20991458?callback=breakingNews&mode=breaking_news">
+            </frameset>
+                                                                                                            
+  </frameset>
+
+</html>
