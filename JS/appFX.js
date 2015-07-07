@@ -42,7 +42,7 @@ FXRateAPP.controller("resultController", ['$scope','$resource','l2Service', func
     //console.log('targetting:' +  $scope.myUrl);
     $scope.l2API  = $resource($scope.myUrl,{callback: "JSON_CALLBACK"},{post: {method: "JSONP"}});
     $scope.l2results= $scope.l2API.post({});
-    console.log('showing results:');
+    console.log('showing results2:');
     console.log($scope.l2results);
     //$scope.parseDate= pDate;
     }]);
