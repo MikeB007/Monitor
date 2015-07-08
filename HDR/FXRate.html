@@ -26,18 +26,16 @@
     </nav>
 </header>
 <div class="container">
-    <div ng-controller="rateController">
-        <input type="text" ng-model="name">
-        Hi there {{name}}
-        <div ng-view> </div>
-    </div>
-    <div ng-controller="resultController">
-        <input type="text" ng-model="name">
-        Hi there {{name}}
-        {{'result:' + JSON.stringfy(true)}}
-        <div ng-view> </div>
-    </div>
+    <div ng-controller="rateCtrl">
+Type: {{rates.query.results.rate.Name}}
+Rate: {{rates.query.results.rate.Rate}}
+Date: {{rates.query.results.rate.Date}}
+Time: {{rates.query.results.rate.Time}}
+Bid:  {{rates.query.results.rate.Ask}}
+Ask:  {{rates.query.results.rate.Bid}}
+</div>    
 
+    
 
 </div>
 </body>
