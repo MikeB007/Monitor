@@ -1,0 +1,30 @@
+<html lang="en-us" ng-app="StockMonitor">
+<head>
+<meta http-equiv="refresh" content="300">
+    <title>Stock Monitor</title>
+    <meta charset="UTF-8">
+        <!-- load bootstrap and fontawesome via CDN -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+</head>
+<frameset cols="300 ,*">
+    <frameset rows="*,*">    
+        <frame src="http://ichart.yahoo.com/t?s=TD&width=582&height=415" name="top">
+        <frame src="http://www.advfn.com/p.php?pid=staticchart&s=T^TD&t=23&p=0&dm=0&vol=1&width=609&height=245&min_pre=0&min_after=0" name="main">
+    </frameset>    
+    <frameset rows="100,100,100,*,200">    
+            <frame src="HDR/NEWS.html">            
+            <frame src="http://www.cnbc.com/franchise/20991458?callback=breakingNews&mode=breaking_news">            
+            <frame src="HDR/FXRate.html">                        
+            <frame src="HDR/L2.html">                    
+            <frame src="http://www.batstrading.com/json/bzx/book/td">                    
+            
+    </frameset>    
+</frameset>    
+
+</html>
