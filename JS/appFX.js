@@ -47,6 +47,12 @@ FXRateAPP.controller("l2Ctrl", ['$scope', '$http', function ($scope,$http) {
 }]);
 
 
+FXRateAPP.controller("new", ['$scope', '$http', function ($scope,$http) {
+    var myRequest = new XMLHttpRequest();
+
+}]);
+
+
 
 
 FXRateAPP.controller("l2Ctrlold", ['$scope', '$http', function ($scope,$http) {
@@ -56,7 +62,6 @@ FXRateAPP.controller("l2Ctrlold", ['$scope', '$http', function ($scope,$http) {
                 method: 'JSONP',
                 url: url
             }).
-            success(function(status) {
                 $scope.l2 = status;
             }).
             error(function(status) {
