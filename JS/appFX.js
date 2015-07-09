@@ -22,7 +22,7 @@ FXRateAPP.service('l2Service',function(){
 FXRateAPP.controller("rateControllerold", ['$scope', 'fxService', function ($scope,fxService) {
     $scope.rateType =fxService.rateType;
     $scope.$watch('rateType',function(){
-        getFXRate.rateType = $scope.rateType;
+        //getFXRate.rateType = $scope.rateType;
     //console.log($scope);
     })
 }]);
@@ -46,29 +46,22 @@ FXRateAPP.controller("l2Ctrl", ['$scope', '$http', function ($scope,$http) {
   .error(function(response) {$scope.l2 =  'error';  });
 }]);
 
-
-FXRateAPP.controller("new", ['$scope', '$http', function ($scope,$http) {
+//not working yet
+FXRateAPP.controller("newCTRL", ['$scope', '$http', function ($scope,$http) {
+    console.log('new controller starting 0');
+    var url = "http://www.batstrading.com/json/bzx/book/td";
     var myRequest = new XMLHttpRequest();
-
+    console.log('new controller starting 1');
+    myRequest.onload=function(response){
+        var buff = myRequest.response;
+        console.log('new controller starting');
+        console.log(buff);
+    }
+    myRequest.open('get',url,true);
+    myRequest.responseType= "json";
+    myRequest.send();
 }]);
 
-
-
-
-FXRateAPP.controller("l2Ctrlold", ['$scope', '$http', function ($scope,$http) {
-    //"https://api.getevents.co/event?&lat=41.904196&lng=12.465974";  
-    var url = "http://www.batstrading.com/json/bzx/book/td";
-                  $http({
-                method: 'JSONP',
-                url: url
-            }).
-                $scope.l2 = status;
-            }).
-            error(function(status) {
-               $scope.l2 = 'error';
-            });
-    
-    }]);
 
 
 
