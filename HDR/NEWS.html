@@ -21,12 +21,13 @@
 </head>
 <body>
 
-<div ng-controller="newsCTRL">
-    NEWS response:: {{response}}
+<div ng-controller="newsCTRLJSONP">
+    <!--http://www.cnbc.com/id/102817690 -->
+    <span ng-if!="""{{newsLink}}""">
+    Breaking News:({{receivedDate}}):{{news.id}}-- <a href="{{  newsLink + news.url}}">{{news.headline}} </a>
+    </span>
 </div>
-    
 </body>
-    
 </html>
 
     
