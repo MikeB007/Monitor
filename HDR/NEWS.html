@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <!-- load bootstrap and fontawesome via CDN -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../CSS/Styles.css" />
     <style>
         html, body, input, select, textarea
         {
@@ -25,8 +26,11 @@
     <!--http://www.cnbc.com/id/102817690 -->
 
         <span ng-if!="""{{newsLink}}""">
-            <div id="mydiv" style="width:200px;background:red" onmouseover="this.style.background='green';" onmouseout="this.style.background='red';">
-            Breaking News:({{receivedDate}}):{{news.id}}-- <a href="{{  newsLink + news.url}}" target="_blank">{{news.headline}} </a>
+            <div id="mydiv" style="width:900px;background:red" onmouseover="this.style.background='green';" onmouseout="this.style.background='red';">
+                Breaking News:({{receivedDate}}):{{news.id}}--
+                <span  class="div_hover">
+                    <a href="{{  newsLink + news.url}}" target="_blank">{{news.headline}} </a>
+                </span>
             </div>
         </span>
 

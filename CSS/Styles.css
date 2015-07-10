@@ -14,3 +14,8 @@
 .link-container a:hover {
     background: #f8f8f8;
 }
+
+
+.div_hover { background-color: #FFFFFF; }
+
+.div_hover:hover { background-color: #000000; }
