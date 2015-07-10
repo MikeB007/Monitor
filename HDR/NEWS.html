@@ -23,9 +23,14 @@
 
 <div ng-controller="newsCTRLJSONP">
     <!--http://www.cnbc.com/id/102817690 -->
-    <span ng-if!="""{{newsLink}}""">
-    Breaking News:({{receivedDate}}):{{news.id}}-- <a href="{{  newsLink + news.url}}" target="_blank">{{news.headline}} </a>
-    </span>
+
+        <span ng-if!="""{{newsLink}}""">
+            <div id="mydiv" style="width:200px;background:red" onmouseover="this.style.background='green';" onmouseout="this.style.background='red';">
+            Breaking News:({{receivedDate}}):{{news.id}}-- <a href="{{  newsLink + news.url}}" target="_blank">{{news.headline}} </a>
+            </div>
+        </span>
+
+</div>
 </div>
 </body>
 </html>
