@@ -12,12 +12,12 @@
             }
         </style>
 </head>
-        <frameset rows="100,*,350,100">
-        <frameset rows="20,*">
-            <frame src="HDR/FXRate.html">
-            <frame src="HDR/NEWS.html"> name="left">
-        </frameset>
-        <frameset cols="480,*,800">
+        <frameset rows="50,*,350,100">
+            <frameset rows="25,25">
+                <frame src="HDR/FXRate.html">
+                <frame src="HDR/NEWS.html"> name="left">
+            </frameset>
+            <frameset cols="480,*,700">
             <frameset rows="25,*">
                 <frame src="HDR/arca.html">
                 <frame ARCA src="http://162.68.208.10/arcadataserver/ArcaBookData.php?Symbol=TD" name="main">
@@ -26,12 +26,12 @@
             <frame src="http://mojeinwestycje.interia.pl/gie/wyk/gpw?spolka=WIG30&spid=undefined&tko=t&obr=t&odn=t" name="main">
                     <!--http://wykresy2.interia.pl/wykresy/sp.php3?spolka=WIG30 -->
         </frameset>
-        <frameset cols="420,*, 680">
+        <frameset cols="420,*, 820">
             <frameset rows="25,*">
                 <frame src="HDR/TD.html">
                 <frame TD src="http://www.advfn.com/p.php?pid=staticchart&s=T^TD&p=0&t=41&dm=1&vol=1" name="bottom">
             </frameset>
-            <frameset cols="100,100,100,400">
+             <frameset cols="100,100,100,400">
                 <frameset rows="25,*">
                     <frame src="HDR/RY.html">
                     <frame Royal  src="http://www.advfn.com/p.php?pid=staticchart&s=T^RY&p=0&t=35&dm=1&vol=1" name="main">
@@ -48,15 +48,10 @@
                     <frame src="HDR/indexes.html">
                     <frame market   src="http://web.tmxmoney.com/marketsca.php" name="main">
                 </frameset>
-            </frameset>
-        <frame src="http://apps.cnbc.com/view.asp?uid=FXRateAPP/delayedQuotes&symbol=TD-T&country=CA" name="bottom">
-
+             </frameset>
+        <frameset rows="*">
+            <frame src="https://chart.finance.yahoo.com/z?s=TD.TO&t=5d&q=c&l=on&z=l&a=v&p=b&lang=en-CA&region=CA" name="bottom">
         </frameset>
-                <frameset rows="25,*">
-                    <frame src="HDR/NEWS.html">
-                    <frame src="http://www.cnbc.com/franchise/20991458?callback=breakingNews&mode=breaking_news">
-                </frameset>
-
-
+        </frameset>
       </frameset>
 </html>
