@@ -30,6 +30,11 @@
                 Breaking News:({{receivedDate}}):{{news.id}}--
                 <span  class="div_hover">
                     <a href="{{  newsLink + news.url}}" target="_blank">{{news.headline}} </a>
+                    <script>
+                        document.cookie="{{newsLink + news.url}}";
+                        x = document.cookie;
+                        alert(x);
+                    </script>
                 </span>
             </div>
         </span>
