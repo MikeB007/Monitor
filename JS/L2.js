@@ -8,8 +8,8 @@ L2App.controller("l2CTRLHTTP", ['$scope', '$http', function ($scope,$http) {
 }]);
 
 L2App.controller("l2CTRLJSONP", ['$scope','$resource', function ($scope, $resource) {
-    $scope.l2Url = 'http://www.batstrading.com/json/bzx/book/td?';
-    $scope.l2API  = $resource($scope.l2Url,{callback: "JSON_CALLBACK"},{get: {method: "JSONP"}});
+    $scope.l2Url = 'http://localhost:8080/json/bzx/book/td';
+    $scope.l2API  = $resource($scope.l2Url);
     $scope.l2="2";
     $scope.l3= $scope.l2API.get({});
     console.log('after the call L2');
