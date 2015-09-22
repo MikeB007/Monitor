@@ -33,7 +33,7 @@ newsAPP.controller("newsCTRLJSONP", ['$scope','$resource', function ($scope, $re
     $scope.newsAPI  = $resource($scope.newsUrl,{callback: "JSON_CALLBACK"},{get: {method: "JSONP"}});
     $scope.news= $scope.newsAPI.get({});
     console.log('after the call News');
-    $scope.newsLink = 'http://www.cnbc.com';
+   // $scope.newsLink = 'http://www.cnbc.com';
     $scope.receivedDate= '';
 }]);
 
